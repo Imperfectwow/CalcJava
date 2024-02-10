@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'slave' }
-
+ssas
     stages {
         stage('Checkout') {
             steps {
