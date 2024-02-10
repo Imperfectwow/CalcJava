@@ -1,10 +1,7 @@
 pipeline {
     agent { label 'slave' }
 
-    tools {
-        maven 'Maven 3'
-        jdk 'JDK 17'
-    }
+
 
     stages {
         stage('Checkout') {
