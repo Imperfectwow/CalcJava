@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="CalculatorAppTest" time="0.563" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="CalculatorAppTest" time="0.027" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
-    <property name="javafx.runtime.version" value="21.0.2+5"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
     <property name="java.class.path" value="/Users/alexanderzavoloko/Projects/CalculatorJava/target/test-classes:/Users/alexanderzavoloko/Projects/CalculatorJava/target/classes:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-controls/21.0.2/javafx-controls-21.0.2.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-controls/21.0.2/javafx-controls-21.0.2-mac-aarch64.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2-mac-aarch64.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-base/21.0.2/javafx-base-21.0.2.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-base/21.0.2/javafx-base-21.0.2-mac-aarch64.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-fxml/21.0.2/javafx-fxml-21.0.2.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-fxml/21.0.2/javafx-fxml-21.0.2-mac-aarch64.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-swing/21.0.2/javafx-swing-21.0.2.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-swing/21.0.2/javafx-swing-21.0.2-mac-aarch64.jar:/Users/alexanderzavoloko/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/Users/alexanderzavoloko/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/alexanderzavoloko/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/Users/alexanderzavoloko/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/alexanderzavoloko/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/Users/alexanderzavoloko/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:"/>
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
-    <property name="user.timezone" value="Asia/Jerusalem"/>
-    <property name="javafx.version" value="21.0.2"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IL"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/21.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/alexanderzavoloko/Projects/CalculatorJava/target/surefire/surefirebooter8876276159101129769.jar /Users/alexanderzavoloko/Projects/CalculatorJava/target/surefire 2024-02-10T16-57-15_858-jvmRun1 surefire5308206397390129795tmp surefire_04161310965530525990tmp"/>
+    <property name="sun.java.command" value="/Users/alexanderzavoloko/Projects/CalculatorJava/target/surefire/surefirebooter4716597373822901539.jar /Users/alexanderzavoloko/Projects/CalculatorJava/target/surefire 2024-02-10T21-18-07_369-jvmRun1 surefire1386684349039868977tmp surefire_08470004179437921820tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/alexanderzavoloko/Projects/CalculatorJava/target/test-classes:/Users/alexanderzavoloko/Projects/CalculatorJava/target/classes:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-controls/21.0.2/javafx-controls-21.0.2.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-controls/21.0.2/javafx-controls-21.0.2-mac-aarch64.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2-mac-aarch64.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-base/21.0.2/javafx-base-21.0.2.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-base/21.0.2/javafx-base-21.0.2-mac-aarch64.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-fxml/21.0.2/javafx-fxml-21.0.2.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-fxml/21.0.2/javafx-fxml-21.0.2-mac-aarch64.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-swing/21.0.2/javafx-swing-21.0.2.jar:/Users/alexanderzavoloko/.m2/repository/org/openjfx/javafx-swing/21.0.2/javafx-swing-21.0.2-mac-aarch64.jar:/Users/alexanderzavoloko/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/Users/alexanderzavoloko/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/alexanderzavoloko/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/Users/alexanderzavoloko/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/alexanderzavoloko/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/Users/alexanderzavoloko/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:"/>
@@ -33,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/alexanderzavoloko/Projects/CalculatorJava/target/surefire/surefirebooter8876276159101129769.jar"/>
+    <property name="surefire.real.class.path" value="/Users/alexanderzavoloko/Projects/CalculatorJava/target/surefire/surefirebooter4716597373822901539.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.1"/>
@@ -62,13 +58,9 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="divisionByZeroTest" classname="CalculatorAppTest" time="0.006">
-    <system-err><![CDATA[Feb 10, 2024 4:57:16 PM com.sun.javafx.application.PlatformImpl startup
-WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5b2c883c'
-]]></system-err>
-  </testcase>
+  <testcase name="divisionByZeroTest" classname="CalculatorAppTest" time="0.015"/>
   <testcase name="divisionTest" classname="CalculatorAppTest" time="0.001"/>
   <testcase name="additionTest" classname="CalculatorAppTest" time="0.001"/>
   <testcase name="multiplicationTest" classname="CalculatorAppTest" time="0.001"/>
-  <testcase name="subtractionTest" classname="CalculatorAppTest" time="0"/>
+  <testcase name="subtractionTest" classname="CalculatorAppTest" time="0.001"/>
 </testsuite>

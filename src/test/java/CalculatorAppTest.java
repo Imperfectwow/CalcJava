@@ -1,46 +1,37 @@
-import com.example.CalculatorApp;
 
-import javafx.embed.swing.JFXPanel;
-import org.junit.jupiter.api.BeforeAll;
+import com.example.CalculatorLogic;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
 class CalculatorAppTest {
 
-    private final CalculatorApp calculator = new CalculatorApp();
+    private final CalculatorLogic calculatorLogic = new CalculatorLogic();
 
-
-    @BeforeAll
-    public static void setUpClass() throws Exception {
-        // This initializes the JavaFX environment.
-        // remov
-        new JFXPanel();
-    }
 
     @Test
     void additionTest() {
-        assertEquals(5, calculator.add(2, 3));
+        assertEquals(5, calculatorLogic.add(2, 3), "2 + 3 should equal 5");
     }
 
     @Test
     void subtractionTest() {
-        assertEquals(1, calculator.subtract(3, 2));
+        assertEquals(1, calculatorLogic.subtract(3, 2), "3 - 2 should equal 1");
     }
 
     @Test
     void multiplicationTest() {
-        assertEquals(6, calculator.multiply(2, 3));
+        assertEquals(6, calculatorLogic.multiply(2, 3), "2 * 3 should equal 6");
     }
 
     @Test
     void divisionTest() {
-        assertEquals(2, calculator.divide(6, 3));
+        assertEquals(2, calculatorLogic.divide(6, 3), "6 / 3 should equal 2");
     }
 
     @Test
     void divisionByZeroTest() {
-        assertThrows(ArithmeticException.class, () -> calculator.divide(1, 0));
+        assertThrows(ArithmeticException.class, () -> calculatorLogic.divide(1, 0),
+                "Division by zero should throw ArithmeticException");
     }
 }

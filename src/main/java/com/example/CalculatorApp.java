@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 public class CalculatorApp extends Application {
 
   private final TextField display = new TextField();
+  private final CalculatorLogic calculatorLogic = new CalculatorLogic(); // Add this line
   private double firstNumber = 0;
   private String operator = "";
   private boolean start = true;
@@ -94,44 +95,10 @@ public class CalculatorApp extends Application {
     return value.equals("+") || value.equals("-") || value.equals("*") || value.equals("/");
   }
 
+
+
   private double calculate(double firstNumber, double secondNumber, String operator) {
-    switch (operator) {
-      case "+" -> {
-        return add(firstNumber, secondNumber);
-      }
-      case "-" -> {
-        return subtract(firstNumber, secondNumber);
-      }
-      case "*" -> {
-        return multiply(firstNumber, secondNumber);
-      }
-      case "/" -> {
-        return divide(firstNumber, secondNumber);
-      }
-      default -> {
-        return 0;
-      }
-    }
-  }
-
-
-  public double add(double firstNumber, double secondNumber) {
-    return firstNumber + secondNumber;
-  }
-
-  public double subtract(double firstNumber, double secondNumber) {
-    return firstNumber - secondNumber;
-  }
-
-  public double multiply(double firstNumber, double secondNumber) {
-    return firstNumber * secondNumber;
-  }
-
-  public double divide(double firstNumber, double secondNumber) {
-    if (secondNumber == 0) {
-      throw new ArithmeticException("Cannot divide by zero");
-    }
-    return firstNumber / secondNumber;
+    return calculatorLogic.calculate(firstNumber, secondNumber, operator);
   }
 
   public static void main(String[] args) {
