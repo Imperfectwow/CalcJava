@@ -1,56 +1,40 @@
 pipeline {
-    agent { label 'slave' }
-
-
-
+    agent {
+        label 'slave' // Ensure this runs on your designated slave node
+    }
+    tools {
+        // Define tools required, ensure these names match your Jenkins configuration
+        maven 'Maven 3' // Name of the Maven installation in Jenkins configuration
+        jdk 'JDK 17' // Name of the JDK installation in Jenkins configuration
+    }
     stages {
         stage('Checkout') {
             steps {
-                // Get the latest code from the SCM
-                checkout scm
+                // Adjust this to match your SCM configuration
+                git 'https://github.com/YourRepository/YourProject.git'
             }
         }
-
-        stage('Compile') {
+        stage('Build') {
             steps {
-                // Compile the project using Maven
-                sh 'mvn clean compile'
+                // Compile your project without running tests
+                sh 'mvn clean package -DskipTests'
             }
         }
-
-        stage('Unit Test') {
+        stage('Test') {
             steps {
-                // Run unit tests using Maven
-                sh 'mvn test'
-            }
-            post {
-                always {
-                    // Archive the test results
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    // Publish HTML reports (if any)
-                    publishHTML(target: [
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: true,
-                        keepAll: true,
-                        reportDir: 'target/surefire-reports',
-                        reportFiles: 'index.html',
-                        reportName: 'JUnit Report'
-                    ])
+                // Wrap the test command with Xvfb to provide a virtual display
+                wrap([$class: 'Xvfb']) {
+                    sh 'mvn test'
                 }
             }
         }
     }
-
     post {
         success {
-            echo 'Build succeeded!'
+            echo 'Build and tests succeeded.'
         }
         failure {
-            echo 'Build failed!'
-        }
-        always {
-            // Clean up the workspace to free space after the build is done
-            cleanWs()
+            echo 'Build or tests failed.'
         }
     }
 }
