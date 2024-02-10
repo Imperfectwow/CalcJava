@@ -1,4 +1,4 @@
-pipeline {
+asdsad pipeline {
     agent { label 'slave' }
 ssas
     stages {
