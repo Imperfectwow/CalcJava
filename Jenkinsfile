@@ -2,11 +2,7 @@ pipeline {
     agent {
         label 'slave' // Ensure this runs on your designated slave node
     }
-    tools {
-        // Define tools required, ensure these names match your Jenkins configuration
-        maven 'Maven 3' // Name of the Maven installation in Jenkins configuration
-        jdk 'JDK 17' // Name of the JDK installation in Jenkins configuration
-    }
+
     stages {
         stage('Checkout') {
             steps {
