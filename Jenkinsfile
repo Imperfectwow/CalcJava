@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'slave' // Ensure this runs on your designated slave node
-    }
+    agent  any
 
     stages {
         stage('Checkout') {
