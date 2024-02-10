@@ -15,7 +15,7 @@ class CalculatorAppTest {
     @BeforeAll
     public static void setUpClass() throws Exception {
         // This initializes the JavaFX environment.
-        // remove testsssss
+        // remove test
         new JFXPanel();
     }
 
