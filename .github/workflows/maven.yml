@@ -58,6 +58,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dependency-graph
-          path: path/to/your/dependency-graph.json
+          path: target/dependency-graph.json
  
 
