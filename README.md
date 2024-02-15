@@ -6,6 +6,7 @@ CalculatorApp is a simple desktop calculator built using JavaFX. It provides bas
 - Clear input with a clear button.
 - User-friendly interface created with JavaFX.
 
+
 ## Prerequisites
 - Java Development Kit (JDK) 17 or higher.
 - Maven for building and managing the project.
