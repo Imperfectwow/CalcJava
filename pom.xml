@@ -5,13 +5,10 @@
 
     <groupId>com.example</groupId>
     <artifactId>CalculatorApp</artifactId>
-    
-
-
-   
-
-
+    <version>1.0-SNAPSHOT</version>
+    <name>CalculatorApp</name>
          
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
