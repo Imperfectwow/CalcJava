@@ -16,6 +16,14 @@ public class CalculatorApp extends Application {
   private double firstNumber = 0;
   private String operator = "";
   private boolean start = true;
+  private boolean start = true;
+  private boolean start = true;
+  private boolean start = true;
+  private boolean start = true;
+  private boolean start = true;
+  private boolean start = true;
+  private boolean start = true;
+  private boolean start = true;
 
   @Override
   public void start(Stage primaryStage) {
