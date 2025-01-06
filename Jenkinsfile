@@ -16,8 +16,9 @@ pipeline {
             steps {
                 echo "Checking and starting Tomcat..."
                 script {
-                    // Add script to check if Tomcat is running, if not, start it
+                    // Add Homebrew to the PATH if necessary
                     sh '''
+                    export PATH="/opt/homebrew/bin:$PATH"
                     if ! nc -z localhost 8070; then
                         echo "Tomcat is not running. Starting Tomcat..."
                         brew services start tomcat
