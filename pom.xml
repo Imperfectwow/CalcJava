@@ -6,7 +6,7 @@
     <groupId>com.example</groupId>
     <artifactId>CalculatorApp</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging> <!-- Changed to jar packaging -->
+    <packaging>war</packaging> <!-- Changed to WAR for web deployment -->
     <name>CalculatorApp</name>
 
     <properties>
@@ -16,7 +16,7 @@
     </properties>
 
     <dependencies>
-        <!-- JavaFX Dependencies -->
+        <!-- JavaFX Dependencies for Desktop -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
@@ -38,13 +38,27 @@
             <version>21.0.2</version>
         </dependency>
 
-        <!-- JUnit Dependencies -->
+        <!-- Servlet API for Web Deployment -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JUnit Dependencies for Testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.9.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+    <groupId>jakarta.servlet</groupId>
+    <artifactId>jakarta.servlet-api</artifactId>
+    <version>6.0.0</version>
+    <scope>provided</scope>
+</dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -65,7 +79,7 @@
                 </configuration>
             </plugin>
 
-            <!-- JavaFX Maven Plugin -->
+            <!-- JavaFX Maven Plugin for Desktop -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -77,6 +91,16 @@
                         --module-path /path/to/javafx-sdk/lib
                         --add-modules javafx.controls,javafx.fxml
                     </jvmArgs>
+                </configuration>
+            </plugin>
+
+            <!-- Maven WAR Plugin for Web Deployment -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
 
