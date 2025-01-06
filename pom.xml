@@ -6,9 +6,9 @@
     <groupId>com.example</groupId>
     <artifactId>CalculatorApp</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging> <!-- Specify WAR packaging -->
     <name>CalculatorApp</name>
-         
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
@@ -16,45 +16,15 @@
     </properties>
 
     <dependencies>
-        <!-- JavaFX dependencies -->
-        <!-- JavaFX base module -->
+        <!-- Java Servlet API -->
         <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>21.0.2</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
         </dependency>
 
-        <!-- JavaFX module for FXML -->
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-            <version>21.0.2</version>
-        </dependency>
-
-        <!-- JavaFX module for Swing integration, required for JFXPanel -->
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-swing</artifactId>
-            <version>21.0.2</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- JUnit Jupiter (JUnit 5) dependencies -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.9.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.9.1</version>
-            <scope>test</scope>
-        </dependency>
-
-
-        <!-- Remove the TestNG dependency if it's not needed -->
+        <!-- Add other dependencies if required -->
     </dependencies>
 
     <build>
@@ -69,25 +39,11 @@
                 </configuration>
             </plugin>
 
-            <!-- JavaFX Maven Plugin -->
-            <plugin>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.8</version>
-                <configuration>
-                    <mainClass>com.example.CalculatorApp</mainClass>
-                </configuration>
-            </plugin>
-
-
-            <!-- Maven Surefire Plugin -->
+            <!-- Maven WAR Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M6</version> <!-- Update to the latest version that supports JUnit 5 -->
-                <configuration>
-                    <useModulePath>false</useModulePath>
-                </configuration>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
             </plugin>
         </plugins>
     </build>
