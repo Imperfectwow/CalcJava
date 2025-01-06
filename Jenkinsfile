@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo "Setting up Java and Maven..."
                 sh 'java -version' 
-                sh 'mvn -version' ד
+                sh 'mvn -version' 
             }
         }
         stage('Start Tomcat') {
