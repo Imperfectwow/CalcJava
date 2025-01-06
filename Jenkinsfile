@@ -8,15 +8,14 @@ pipeline {
         stage('Set Up') {
             steps {
                 echo "Setting up Java and Maven..."
-                sh 'java -version' // Verify Java is correctly configured
-                sh 'mvn -version'  // Verify Maven is correctly configured
+                sh 'java -version' 
+                sh 'mvn -version'  
             }
         }
         stage('Start Tomcat') {
             steps {
                 echo "Checking and starting Tomcat..."
                 script {
-                    // Add Homebrew to the PATH if necessary
                     sh '''
                     export PATH="/opt/homebrew/bin:$PATH"
                     if ! nc -z localhost 8070; then
