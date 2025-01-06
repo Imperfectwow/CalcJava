@@ -24,13 +24,16 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo "Deploying application to Tomcat..."
-                sh '''
-                cp target/*.war /path/to/your/tomcat/webapps/
-                '''
-            }
-        }
+       stage('Deploy to Tomcat') {
+           steps {
+        echo 'Deploying to Tomcat...'
+        deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', 
+                                  path: '',
+                                  url: 'http://localhost:8080/manager/text')],
+               contextPath: 'calc-app',
+               war: '**/target/*.war'
+    }
+} 
+        
     }
 }
