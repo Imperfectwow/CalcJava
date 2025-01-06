@@ -29,7 +29,7 @@ pipeline {
                 echo 'Deploying to Tomcat...'
                 deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', 
                                           path: '',
-                                          url: 'http://localhost:8080/manager/text')],
+                                          url: 'http://localhost:8070/manager/text')],
                        contextPath: 'calc-app',
                        war: '**/target/*.war'
             }
