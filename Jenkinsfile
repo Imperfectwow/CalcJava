@@ -48,9 +48,7 @@ pipeline {
             }
         }
         stage('Deploy to Tomcat') {
-            when {
-                branch 'main'
-            }
+        
             steps {
                 echo 'Deploying to Tomcat...'
                 deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials',
