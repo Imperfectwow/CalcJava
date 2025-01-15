@@ -6,48 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalculatorApp</title>
     <style>
+        /* General styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
+            background: linear-gradient(to bottom, #eef2f3, #8e9eab);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+
         .container {
-            margin-top: 50px;
             padding: 20px;
             max-width: 400px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-left: auto;
-            margin-right: auto;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         h1 {
-            color: #333;
+            color: #333333;
+            margin-bottom: 20px;
+            font-size: 24px;
         }
-        label {
-            font-size: 16px;
+
+        form label {
+            font-size: 14px;
             font-weight: bold;
-            margin-top: 10px;
+            margin-bottom: 5px;
             display: block;
+            color: #555555;
         }
-        input, select, button {
-            width: 100%;
+
+        form input, form select, form button {
+            width: calc(100% - 20px);
             padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            margin: 10px auto;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 14px;
+            outline: none;
         }
-        button {
+
+        form input:focus, form select:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        form button {
             background-color: #007BFF;
             color: white;
-            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
             border: none;
+            transition: background-color 0.3s ease;
         }
-        button:hover {
+
+        form button:hover {
             background-color: #0056b3;
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            form input, form select, form button {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -56,10 +90,10 @@
         <h1>Welcome to CalculatorApp!</h1>
         <form action="CalculatorServlet" method="GET">
             <label for="number1">Number 1:</label>
-            <input type="text" id="number1" name="number1" required>
+            <input type="text" id="number1" name="number1" placeholder="Enter first number" required>
 
             <label for="number2">Number 2:</label>
-            <input type="text" id="number2" name="number2" required>
+            <input type="text" id="number2" name="number2" placeholder="Enter second number" required>
 
             <label for="operation">Operation:</label>
             <select id="operation" name="operation">
