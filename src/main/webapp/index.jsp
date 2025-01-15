@@ -101,6 +101,7 @@
                 <option value="subtract">Subtraction</option>
                 <option value="multiply">Multiplication</option>
                 <option value="divide">Division</option>
+                <option value="divide">Alex</option>
             </select>
 
             <button type="submit">Calculate</button>
