@@ -87,7 +87,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to CalculatorApp!</h1>
+        <h1>CalculatorAPP</h1>
         <form action="CalculatorServlet" method="GET">
             <label for="number1">Number 1:</label>
             <input type="text" id="number1" name="number1" placeholder="Enter first number" required>
@@ -101,7 +101,6 @@
                 <option value="subtract">Subtraction</option>
                 <option value="multiply">Multiplication</option>
                 <option value="divide">Division</option>
-                <option value="divide">Alex</option>
             </select>
 
             <button type="submit">Calculate</button>
