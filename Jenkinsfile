@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'ubuntu'
+        label ''
     }
     tools {
         jdk 'JDK_21'
