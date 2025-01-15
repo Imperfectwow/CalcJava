@@ -1,5 +1,5 @@
 pipeline {
-    agent ubuntu
+    agent 'ubuntu'
     tools {
         jdk 'JDK_21'
         maven 'Maven'
