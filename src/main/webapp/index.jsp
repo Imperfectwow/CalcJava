@@ -19,45 +19,46 @@
         }
 
         .container {
-            padding: 20px;
-            max-width: 400px;
+            padding: 30px;
+            max-width: 500px;
             background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
             color: #333333;
-            margin-bottom: 20px;
-            font-size: 24px;
+            margin-bottom: 30px;
+            font-size: 32px;
         }
 
         form label {
-            font-size: 14px;
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             display: block;
             color: #555555;
         }
 
         form input, form select, form button {
             width: calc(100% - 20px);
-            padding: 10px;
-            margin: 10px auto;
+            padding: 15px;
+            margin: 15px auto;
             border: 1px solid #cccccc;
-            border-radius: 5px;
-            font-size: 14px;
+            border-radius: 6px;
+            font-size: 16px;
             outline: none;
         }
 
         form input:focus, form select:focus {
             border-color: #007BFF;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
         }
 
         form button {
             background-color: #007BFF;
             color: white;
+            font-size: 18px;
             font-weight: bold;
             cursor: pointer;
             border: none;
@@ -71,16 +72,16 @@
         /* Responsive design */
         @media (max-width: 480px) {
             .container {
-                padding: 15px;
-                width: 90%;
+                padding: 20px;
+                width: 95%;
             }
 
             h1 {
-                font-size: 20px;
+                font-size: 24px;
             }
 
             form input, form select, form button {
-                font-size: 12px;
+                font-size: 14px;
             }
         }
     </style>
